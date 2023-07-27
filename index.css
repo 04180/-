@@ -1,0 +1,304 @@
+/* CSS 変数定義 */
+:root {
+    --primary-bg: #789;
+    --secondary-bg: #FDF0E9;
+    --primary-color: white;
+    --secondary-color: #391400;
+    --teritiary-color: #EF6D58;
+    --padding-default: 24px;
+    --padding-narrow: 12px;
+    --padding-footer: 60px;
+}
+/* body リセット */
+body {
+    margin: 0px;
+}
+img {
+    width: 100%;
+}
+button {
+    font-size: 8px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    background: transparent;
+}
+
+/* header */
+
+
+header {
+    color: var(--primary-color);
+    background-color: var(--primary-bg);
+    padding: var(--padding-default);
+}
+
+@media(min-width: 768px){
+    #header-catch {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #header-catch-img,#header-catch-text {
+       padding: 5%; 
+    }
+}
+
+/*ハンバーガーメニュー*/
+#menubar-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.nav {
+    margin-right: 40px;
+}
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+  }
+  
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+    background: white;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+/*一番目のページ*/
+.title {
+    padding: var(--padding-footer);
+    text-align: left;
+}
+
+
+.my-text span{
+    font-family: serif;
+    font-size: 50px;
+
+}
+.desi-text span{
+    font-family: cursive;
+    font-size: 60px;
+    font-style: italic;
+    text-align: left;
+}
+
+.title2 {
+    text-align: right;
+}
+.btn1 {
+    color: cornsilk;
+}
+/*main*/
+
+section#home-works {
+    color: white;
+
+}
+/*meetme~のページ*/
+.meetsize{
+    width: auto;
+    height: 600px;
+    background-color: white;
+}
+.meet {
+    text-align: center;
+}
+.meet-text span{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: -170px;
+}
+.hey-text span{
+    font-family: cursive;
+    font-size: 50px;
+    vertical-align: -60px;
+}
+.more-text span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    vertical-align: -60px;
+    color: red;
+    letter-spacing: 14px;
+}
+.about-text span{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+    vertical-align: -10px;
+    padding-right: 20px;
+}
+.button2 {
+    color: black;
+    width: 1100px;
+}
+
+/*背景黒い部分*/
+.home-works {
+    width: 100%;
+    height: 553px;
+    background-color: black;
+    
+}
+.just-text span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: white;
+    text-align: left;
+    vertical-align: -40px;
+    letter-spacing: 20px;
+}
+.works-text {
+    text-align: center;
+}
+.works-text span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    color: white;
+    vertical-align: -250px;
+    text-align: center;    
+}
+.check-text {
+    text-align: center;
+}
+.check-text span{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    font-size: 13px;
+    text-align: center;
+    vertical-align: -5px;
+}
+.sita-text{
+    text-align: center;
+}
+.sita-text span{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(217, 196, 128);
+    font-size: 40px;
+    text-align: center;
+    vertical-align: -50px;
+}
+.sita2-text{
+    text-align: center;
+}
+.sita2-text span{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(217, 196, 128);
+    font-size: 25px;
+    text-align: center;
+    vertical-align: -3px;
+}
+.sita3-text{
+    text-align: center;
+}
+.sita3-text span{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(217, 196, 128);
+    font-size: 1%;
+    text-align: center;
+    vertical-align: -3px;
+}
+
+.button1 {
+    color: white;
+}
+.myworks-text span{
+    font-family: serif;
+    vertical-align: -60px;
+    padding-left: 5px;
+}
+.Graphic-text span{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    font-size: 50px;
+}
+
+/*worksの部分*/
+.myworks{
+    width: 100%;
+    height: 1500px;
+    background-color: lightgrey;
+}
+/*poster*/
+.poster-img {
+    margin: 0px auto;
+    width: 400px;
+}
+.poster-text {
+    text-align: center;
+    font-size: 16px;
+    color: cornsilk;
+    
+}
+
+/*goods*/
+.goods-img {
+    margin: 0px auto;
+    width: 250px;
+}
+.goods-text {
+    text-align: center;
+    vertical-align: -10px;
+    font-size: 16px;
+    color: cornsilk;
+}
+.btn4{
+    color: cornsilk;
+    background-color: darkgray;
+    border-radius:30px;
+}
+/*footer*/
+.footer{
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+.btn5{
+    color: cornsilk;
+}
