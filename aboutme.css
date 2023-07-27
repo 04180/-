@@ -1,0 +1,110 @@
+/* body リセット */
+body {
+    margin: 0px;
+}
+img {
+    width: 100%;
+}
+button {
+    font-size: 8px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    background: transparent;
+}
+
+/* header */
+
+
+header {
+    color: var(--primary-color);
+    background-color: var(--primary-bg);
+    padding: var(--padding-default);
+}
+@media(min-width: 768px){
+    #header-catch {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #header-catch-img,#header-catch-text {
+       padding: 5%; 
+    }
+}
+
+/*ハンバーガーメニュー*/
+#menubar-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.nav {
+    margin-right: 40px;
+}
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+  }
+  
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+    background: white;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+/*一番目のページ*/
+.aboutme{
+    width: auto;
+    height: 600px;
+    background-color: rgb(79, 88, 64);
+}
+.about text{
+    text-align: center;
+    vertical-align: -10px;
+    font-size: 16px;
+    color: cornsilk;
+}
